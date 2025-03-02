@@ -64,20 +64,19 @@ nav {
     transition: color 0.3s;
 }
 
-    .nav-links a:hover {
-        color: #00ff88;
-    }
+.nav-links a:hover {
+    color: #00ff88;
+}
 
-    .nav-links a.active {
-        color: #00ff88; /* Change color to match hover or a different color */
-        font-weight: bold; /* Optional: make the active link bold */
-        text-decoration: underline; /* Optional: underline the active link */
-    }
+.nav-links a.active {
+    color: #00ff88; /* Change color to match hover or a different color */
+    font-weight: bold; /* Optional: make the active link bold */
+    text-decoration: underline; /* Optional: underline the active link */
+}
 
-    .nav-links {
-        justify-content: space-between; /* Adjust this value as needed */
-    }
-
+.nav-links {
+    justify-content: space-between; /* Adjust this value as needed */
+}
 
 /* Hamburger Menu */
 .hamburger {
@@ -105,11 +104,11 @@ nav {
         top: 80px;
         right: -100%;
         height: calc(100vh - 80px);
-        width: 80%;
+        width: 45%;
         flex-direction: column;
         background: rgba(0, 0, 0, 0.95);
         backdrop-filter: blur(1px);
-        transition: right 0.3s ease;
+        transition: right 0.5s ease-in-out; /* Enhanced sliding effect */
         padding: 2rem;
         justify-content: flex-start; /* Changed from left */
         align-items: flex-start; /* Proper left alignment */
@@ -125,7 +124,6 @@ nav {
         margin: 1rem 0;
         width: 100%;
         text-align: left; /* Changed from center */
-        /* Remove justify-content: left - not needed */
     }
 
     /* Improved Hamburger Animation */
@@ -141,6 +139,7 @@ nav {
         transform: rotate(45deg) translate(-5px, -6px);
     }
 }
+
 /* Hero Section */
 #hero {
     height: 100vh;
