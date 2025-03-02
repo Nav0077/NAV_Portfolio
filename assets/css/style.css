@@ -64,9 +64,20 @@ nav {
     transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: #00ff88;
-}
+    .nav-links a:hover {
+        color: #00ff88;
+    }
+
+    .nav-links a.active {
+        color: #00ff88; /* Change color to match hover or a different color */
+        font-weight: bold; /* Optional: make the active link bold */
+        text-decoration: underline; /* Optional: underline the active link */
+    }
+
+    .nav-links {
+        justify-content: space-between; /* Adjust this value as needed */
+    }
+
 
 /* Hamburger Menu */
 .hamburger {
