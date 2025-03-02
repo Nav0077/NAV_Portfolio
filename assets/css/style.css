@@ -105,6 +105,7 @@ nav {
 
     .nav-links.active {
         right: 0; /* Slide the menu into view */
+        justify-content: left;
     }
 
     .nav-links li {
