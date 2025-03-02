@@ -78,6 +78,29 @@ nav {
     justify-content: space-between; /* Adjust this value as needed */
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 110;
+    background-color: #444;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+}
+.dropdown-content a {
+    color: white;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+}
+.dropdown-content a:hover {
+    background-color: #555;
+}
+.nav-links li:hover .dropdown-content {
+    display: block;
+}
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -118,6 +141,15 @@ nav {
 
     .nav-links.active {
         right: 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        display: none;
+        background-color: #555;
+    }
+    .nav-links li:hover .dropdown-content {
+        display: block;
     }
 
     .nav-links li {
