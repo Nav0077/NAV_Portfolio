@@ -94,40 +94,43 @@ nav {
     transition: all 0.3s ease;
 }
 
-/* Mobile Menu Styles */
-@media (max-width: 768px) {
+@media (max-width: 911px) {
     .hamburger {
         display: block;
+        z-index: 1000; /* Ensure hamburger stays on top */
     }
 
     .nav-links {
         position: fixed;
-        top: 80px; /* Adjust based on your navbar height */
-        right: -100%; /* Hide the menu off-screen */
+        top: 80px;
+        right: -100%;
         height: calc(100vh - 80px);
-        width: 80%; /* Width of the slide-in menu */
+        width: 80%;
         flex-direction: column;
         background: rgba(0, 0, 0, 0.95);
         backdrop-filter: blur(1px);
         transition: right 0.3s ease;
-        padding: 2rem 0;
-        justify-content: left;
+        padding: 2rem;
+        justify-content: flex-start; /* Changed from left */
+        align-items: flex-start; /* Proper left alignment */
+        z-index: 999; /* Ensure menu stays below hamburger but above content */
+        overflow-y: auto; /* Add scroll if content overflows */
     }
 
     .nav-links.active {
-        right: 0; /* Slide the menu into view */
-        justify-content: left;
+        right: 0;
     }
 
     .nav-links li {
         margin: 1rem 0;
-        text-align: center;
-        justify-content: left;
+        width: 100%;
+        text-align: left; /* Changed from center */
+        /* Remove justify-content: left - not needed */
     }
 
-    /* Hamburger Animation */
+    /* Improved Hamburger Animation */
     .hamburger.active .line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(-45deg) translate(-5px, 6px);
     }
 
     .hamburger.active .line:nth-child(2) {
@@ -135,10 +138,9 @@ nav {
     }
 
     .hamburger.active .line:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 }
-
 /* Hero Section */
 #hero {
     height: 100vh;
