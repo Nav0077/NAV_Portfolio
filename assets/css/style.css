@@ -100,7 +100,7 @@ nav {
         backdrop-filter: blur(1px);
         transition: right 0.3s ease;
         padding: 2rem 0;
-        justify-content: flex-start;
+        justify-content: left;
     }
 
     .nav-links.active {
