@@ -3,19 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - NAV RAJ BASNET</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Animated Resume</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #181818;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            color: #fff;
+            font-size: 18px;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .back-button i {
+            margin-right: 8px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            padding: 40px;
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        section {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <a href="javascript:history.back()" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back
+    </a>
+    
+    <h2>My Resume</h2>
 
-    <section id="resume">
-        <h2 class="section-title">Resume</h2>
-        <div class="resume-content">
-            <!-- Add resume content here -->
-        </div>
-    </section>
+    <div class="container">
+        <section>
+            <h3>About Me</h3>
+            <p>A passionate developer with expertise in web and game development.</p>
+        </section>
 
-    <script src="assets/js/script.js"></script>
+        <section>
+            <h3>Experience</h3>
+            <p>Worked on multiple projects in Unity, React, and Node.js.</p>
+        </section>
+
+        <section>
+            <h3>Skills</h3>
+            <p>JavaScript, C++, Python, Unity, Flutter, Node.js.</p>
+        </section>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll("section");
+        window.addEventListener("scroll", () => {
+            sections.forEach(section => {
+                if (section.getBoundingClientRect().top < window.innerHeight - 50) {
+                    section.classList.add("visible");
+                }
+            });
+        });
+    </script>
 </body>
 </html>

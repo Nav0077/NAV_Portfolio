@@ -7,3 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinks.classList.toggle('active');
     });
 });
+ // Scroll animation
+ const sections = document.querySelectorAll("section");
+ window.addEventListener("scroll", () => {
+     sections.forEach(section => {
+         if (section.getBoundingClientRect().top < window.innerHeight - 50) {
+             section.classList.add("visible");
+         }
+     });
+ });
