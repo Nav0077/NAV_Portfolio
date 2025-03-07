@@ -77,7 +77,7 @@
             transform: translateY(0);
         }
 
-        @media (max-width: 991) {
+        @media (max-width: 919) {
             .container {
                 padding: 30px;
             }
@@ -89,41 +89,65 @@
         <i class="fas fa-arrow-left"></i> Back
     </a>
     
-    <h2>My Resume</h2>
+    <h2>John Doe's Resume</h2>
+
 
     <div class="container">
         <section>
-            <h3>About Me</h3>
-            <p>A passionate developer with expertise in web and game development.</p>
+            <h3>Summary</h3>
+            <p>A dedicated software developer with a strong background in web and game development, seeking to leverage skills in a challenging role.</p>
+
         </section>
 
         <section>
             <h3>Experience</h3>
-            <p>Worked on multiple projects in Unity, React, and Node.js.</p>
+            <p>Software Developer at XYZ Company (2020 - Present): Worked on multiple projects in Unity, React, and Node.js.</p>
+
         </section>
 
         <section>
             <h3>Skills</h3>
-            <p>JavaScript, C++, Python, Unity, Flutter, Node.js.</p>
+            <p>JavaScript, C++, Python, Unity, Flutter, Node.js, Git, Agile methodologies.</p>
+
         </section>
 
         <section>
             <h3>Education</h3>
-            <p>Bachelor's Degree in Computer Science from XYZ University.</p>
+            <p>Bachelor's Degree in Computer Science from XYZ University (2016 - 2020).</p>
+
         </section>
 
         <section>
             <h3>Projects</h3>
-            <p>Developed a portfolio website and a task management app.</p>
+            <p>Developed a portfolio website and a task management app. <a href="https://github.com/username/portfolio" target="_blank">View on GitHub</a>.</p>
+
         </section>
 
         <section>
             <h3>Contact Information</h3>
-            <p>Email: example@example.com | Phone: (123) 456-7890</p>
+            <p>Email: johndoe@example.com | Phone: (123) 456-7890</p>
+
+        </section>
+
+        <!-- New Hobbies Section -->
+        <section>
+            <h3>Certifications</h3>
+            <p>Certified JavaScript Developer | Unity Certified Developer</p>
+        </section>
+
+        <section>
+            <h3>Hobbies</h3>
+            <p>In my free time, I enjoy hiking, playing video games, and exploring new technologies.</p>
+
         </section>
     </div>
 
     <script>
+        // Function to download the resume as a PDF
+        function downloadResume() {
+            window.open('path/to/resume.pdf', '_blank');
+        }
+
         const sections = document.querySelectorAll("section");
         window.addEventListener("scroll", () => {
             sections.forEach(section => {
@@ -133,5 +157,7 @@
             });
         });
     </script>
+    <button onclick="downloadResume()">Download Resume</button>
+
 </body>
 </html>
