@@ -78,27 +78,63 @@ nav {
     justify-content: space-between; /* Adjust this value as needed */
 }
 
+/* Dropdown Menu */
 .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
-    left: 110;
+    left: 0;
     background-color: #444;
-    list-style: none;
+    border-radius: 5px;
     padding: 10px 0;
     min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
+
 .dropdown-content a {
-    color: white;
+    color: #ebebeb;
     font-size: 16px;
     display: block;
-    padding: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
+
 .dropdown-content a:hover {
     background-color: #555;
 }
+
+.nav-links li {
+    position: relative;
+}
+
 .nav-links li:hover .dropdown-content {
     display: block;
+}
+
+@media (max-width: 911px) {
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .dropdown-content a {
+        padding: 10px 0;
+        background-color: #444;
+        margin: 5px 0;
+        border-radius: 5px;
+    }
+
+    .nav-links li:hover .dropdown-content {
+        display: none;
+    }
+
+    .nav-links li.active .dropdown-content {
+        display: block;
+    }
 }
 
 /* Hamburger Menu */
