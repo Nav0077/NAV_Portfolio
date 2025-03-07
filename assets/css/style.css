@@ -367,3 +367,41 @@ footer {
     opacity: 1;
     visibility: visible;
 }
+
+/* Resume Section */
+.resume {
+    padding: 50px 20px;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+.resume h2 {
+    font-size: 2.5rem;
+    color: #00ff88;
+    margin-bottom: 20px;
+}
+
+.resume p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.resume .experience, .resume .education {
+    margin: 20px 0;
+}
+
+.resume .experience h3, .resume .education h3 {
+    font-size: 1.8rem;
+    color: #00cc66;
+}
+
+.resume .experience ul, .resume .education ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.resume .experience li, .resume .education li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #fff;
+}
