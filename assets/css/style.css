@@ -61,7 +61,7 @@ nav {
 }
 
 .nav-links a {
-    color: #ffffff; /* Changed to white */
+    color: #d45555; /* Changed to white */
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s;
@@ -122,7 +122,7 @@ nav {
 .hamburger .line {
     width: 25px;
     height: 2px;
-    background: #ffffff; /* Changed to white */
+    background: #753636; /* Changed to white */
     margin: 5px 0;
     transition: all 0.3s ease;
 }
@@ -192,7 +192,10 @@ nav {
     text-align: center;
     padding: 0 20px;
     padding-top: 80px;
+    background-size: cover; /* Ensure the background image covers the section */
+    background-position: center; /* Center the background image */
 }
+
 
 .hero-content h1 {
     font-size: 3.5rem;
@@ -201,7 +204,7 @@ nav {
 
 .hero-content p {
     font-size: 1.5rem;
-    color: #e0e0e0; /* Changed to an even lighter shade for better contrast */
+    color: #ffffff; /* Changed to an even lighter shade for better contrast */
 
 }
 
@@ -338,7 +341,16 @@ footer {
     visibility: visible;
 }
 
+/* Profile Image Styles */
+img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+    margin: 0 auto; /* Center the image */
+}
+
 /* Resume Section */
+
 .resume {
     padding: 50px 20px;
     background-color: #222;
