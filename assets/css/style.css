@@ -6,8 +6,10 @@
 }
 
 body {
-    background-color: #1a1a1a;
-    color: #fff;
+    background: linear-gradient(180deg, #121212, #1a1a1a); /* Changed to a gradient background */
+
+
+    color: #ffffff; /* Changed to white */
 }
 
 /* Navbar Styles */
@@ -15,7 +17,8 @@ nav {
     position: fixed;
     width: 100%;
     padding: 20px 50px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #1a1a1a; /* Changed to a lighter black */
+
     backdrop-filter: blur(10px);
     z-index: 1000;
     display: flex;
@@ -58,7 +61,7 @@ nav {
 }
 
 .nav-links a {
-    color: #fff;
+    color: #ffffff; /* Changed to white */
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s;
@@ -72,10 +75,6 @@ nav {
     color: #00ff88; /* Change color to match hover or a different color */
     font-weight: bold; /* Optional: make the active link bold */
     text-decoration: underline; /* Optional: underline the active link */
-}
-
-.nav-links {
-    justify-content: space-between; /* Adjust this value as needed */
 }
 
 /* Dropdown Menu */
@@ -113,30 +112,6 @@ nav {
     display: block;
 }
 
-@media (max-width: 911px) {
-    .dropdown-content {
-        position: static;
-        box-shadow: none;
-        background-color: transparent;
-        padding: 0;
-    }
-
-    .dropdown-content a {
-        padding: 10px 0;
-        background-color: #444;
-        margin: 5px 0;
-        border-radius: 5px;
-    }
-
-    .nav-links li:hover .dropdown-content {
-        display: none;
-    }
-
-    .nav-links li.active .dropdown-content {
-        display: block;
-    }
-}
-
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -147,7 +122,7 @@ nav {
 .hamburger .line {
     width: 25px;
     height: 2px;
-    background: #fff;
+    background: #ffffff; /* Changed to white */
     margin: 5px 0;
     transition: all 0.3s ease;
 }
@@ -226,15 +201,8 @@ nav {
 
 .hero-content p {
     font-size: 1.5rem;
-    color: #ccc;
-}
+    color: #e0e0e0; /* Changed to an even lighter shade for better contrast */
 
-.profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin: 20px auto;
-    border: 3px solid #208154;
 }
 
 /* Sections */
@@ -303,13 +271,14 @@ input, textarea {
     background-color: #333;
     border: 1px solid #444;
     border-radius: 5px;
-    color: #fff;
+    color: #ffffff; /* Changed to white */
     margin-bottom: 15px;
 }
 
 button {
     background-color: #00ff88;
-    color: #1a1a1a;
+    color: #121212; /* Changed to a lighter black */
+
     padding: 12px 30px;
     border: none;
     border-radius: 5px;
@@ -319,7 +288,8 @@ button {
 }
 
 button:hover {
-    background-color: #00cc66;
+    background-color: #00b359; /* Changed to a more vibrant shade */
+
 }
 
 /* Footer */
@@ -334,7 +304,7 @@ footer {
 }
 
 .social-links a {
-    color: #fff;
+    color: #ffffff; /* Changed to white */
     margin: 0 10px;
     font-size: 1.5rem;
     transition: color 0.3s;
@@ -350,7 +320,7 @@ footer {
     bottom: 20px;
     right: 20px;
     background-color: #00ff88;
-    color: #1a1a1a;
+    color: #000000; /* Changed to black */
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -383,7 +353,7 @@ footer {
 
 .resume p {
     font-size: 1.2rem;
-    color: #ccc;
+    color: #cccccc; /* Changed to a lighter shade for contrast */
 }
 
 .resume .experience, .resume .education {
@@ -403,5 +373,5 @@ footer {
 .resume .experience li, .resume .education li {
     margin: 10px 0;
     font-size: 1.1rem;
-    color: #fff;
+    color: #ffffff; /* Changed to white */
 }
